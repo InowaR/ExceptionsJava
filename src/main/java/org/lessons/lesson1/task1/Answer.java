@@ -2,7 +2,7 @@ package org.lessons.lesson1.task1;
 
 public class Answer {
     public static void arrayOutOfBoundsException() {
-        int[] arr = new int[] {1,2};
+        int[] arr = new int[]{1,2};
         System.out.println(arr[2]);
     }
 
