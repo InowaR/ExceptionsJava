@@ -1,4 +1,4 @@
-package org.lessons.application;
+package org.lessons.application.model;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -18,6 +18,10 @@ public class Person {
         this.birthDate = birthDate;
         this.phone = phone;
         this.gender = gender;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     @Override
