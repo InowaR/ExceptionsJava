@@ -1,17 +1,16 @@
 package org.lessons.application.view;
 
 import org.lessons.application.presenter.Presenter;
-
 import java.util.Scanner;
 
 public class View {
-    private Scanner scanner;
-    private Presenter presenter;
+    private final Scanner scanner;
+    private final Presenter presenter;
     private boolean work;
 
     public View() {
         scanner = new Scanner(System.in);
-        presenter = new Presenter(this);
+        presenter = new Presenter();
         work = true;
     }
 
@@ -27,6 +26,7 @@ public class View {
         System.out.println("Главное меню:");
         System.out.println("1. Создать нового человека");
         System.out.println("2. Сохранить нового человека");
+        System.out.println("3. Выйти из приложения");
     }
 
     public void execute() {

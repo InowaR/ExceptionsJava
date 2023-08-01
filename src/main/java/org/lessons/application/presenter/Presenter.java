@@ -1,18 +1,12 @@
 package org.lessons.application.presenter;
 
 import org.lessons.application.model.Service;
-import org.lessons.application.model.exceptions.InvalidDataLengthException;
-import org.lessons.application.model.exceptions.NotEnoughDataException;
-import org.lessons.application.view.View;
-
 import java.util.Scanner;
 
 public class Presenter {
-    private View view;
-    private Service service;
+    private final Service service;
 
-    public Presenter(View view) {
-        this.view = view;
+    public Presenter() {
         service = new Service();
     }
 

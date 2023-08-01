@@ -1,17 +1,15 @@
 package org.lessons.application.model;
 
-import org.lessons.application.model.exceptions.InvalidDataLengthException;
-import org.lessons.application.model.exceptions.NotEnoughDataException;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.HashMap;
 import java.util.Map;
 
 public class CheckData {
-    private Map<String, String> dataMap;
+    private final Map<String, String> dataMap;
     private Person person;
 
     public CheckData() {
@@ -22,7 +20,7 @@ public class CheckData {
         System.out.println(person);
     }
 
-    public void setDataMap(String[] dataInput) {
+    public void setDataMap(String[] dataInput){
         for (String item : dataInput) {
             String[] itemData = item.split(":");
             if (itemData.length != 2) {
@@ -42,7 +40,7 @@ public class CheckData {
         try {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
             birthDate = LocalDate.parse(birthDateStr, formatter);
-        } catch (Exception e) {
+        } catch (NullPointerException e) {
             System.out.println("Ошибка: неверный формат даты рождения");
         }
 
@@ -60,10 +58,10 @@ public class CheckData {
             System.out.println("Ошибка: неверный формат пола");
         }
 
-        if (lastName == null || firstName == null || middleName == null || birthDateStr == null || phoneStr == null || genderStr == null) {
-            System.out.println("Ошибка: не все данные были введены");
-        } else {
+        try{
             person = new Person(lastName, firstName, middleName, birthDate, phone, gender);
+        } catch (NullPointerException e) {
+            System.out.println("Ошибка: не все данные были введены");
         }
     }
 

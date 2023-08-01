@@ -1,10 +1,7 @@
 package org.lessons.application.model;
 
-import org.lessons.application.model.exceptions.InvalidDataLengthException;
-import org.lessons.application.model.exceptions.NotEnoughDataException;
-
 public class Service {
-    private CheckData data;
+    private final CheckData data;
 
     public Service() {
         data = new CheckData();

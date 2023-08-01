@@ -4,12 +4,12 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Person {
-    private String lastName;
-    private String firstName;
-    private String middleName;
-    private LocalDate birthDate;
-    private long phone;
-    private Gender gender;
+    private final String lastName;
+    private final String firstName;
+    private final String middleName;
+    private final LocalDate birthDate;
+    private final long phone;
+    private final Gender gender;
 
     public Person(String lastName, String firstName, String middleName, LocalDate birthDate, long phone, Gender gender) {
         this.lastName = lastName;
