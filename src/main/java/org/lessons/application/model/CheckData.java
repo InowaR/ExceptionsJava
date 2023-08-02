@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.HashMap;
+import java.util.InputMismatchException;
 import java.util.Map;
 
 public class CheckData {
@@ -23,10 +24,11 @@ public class CheckData {
     public void setDataMap(String[] dataInput){
         for (String item : dataInput) {
             String[] itemData = item.split(":");
-            if (itemData.length != 2) {
+            try {
+                dataMap.put(itemData[0], itemData[1]);
+            } catch (ArrayIndexOutOfBoundsException | InputMismatchException e) {
                 System.out.println("Ошибка: неверный формат данных");
             }
-            dataMap.put(itemData[0], itemData[1]);
         }
 
         String lastName = dataMap.get("Фамилия");
@@ -40,7 +42,7 @@ public class CheckData {
         try {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
             birthDate = LocalDate.parse(birthDateStr, formatter);
-        } catch (NullPointerException e) {
+        } catch (DateTimeParseException | InputMismatchException e) {
             System.out.println("Ошибка: неверный формат даты рождения");
         }
 
@@ -58,10 +60,10 @@ public class CheckData {
             System.out.println("Ошибка: неверный формат пола");
         }
 
-        try{
-            person = new Person(lastName, firstName, middleName, birthDate, phone, gender);
-        } catch (NullPointerException e) {
+        if (lastName == null || firstName == null || middleName == null || birthDate == null || phone == 0 || gender == null) {
             System.out.println("Ошибка: не все данные были введены");
+        } else {
+            person = new Person(lastName, firstName, middleName, birthDate, phone, gender);
         }
     }
 

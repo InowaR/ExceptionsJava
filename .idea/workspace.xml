@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f6345d3-6d97-4471-a12e-2ba6d6dd70b3" name="Changes" comment="added consoleUI">
+    <list default="true" id="7f6345d3-6d97-4471-a12e-2ba6d6dd70b3" name="Changes" comment="fix">
+      <change afterPath="$PROJECT_DIR$/Иванов.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/application/model/CheckData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/application/model/CheckData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/application/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/application/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/application/model/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/application/model/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/application/model/exceptions/InvalidDataLengthException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/application/model/exceptions/NotEnoughDataException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/application/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/application/presenter/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/application/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/application/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690902744831</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix">
+      <option name="closed" value="true" />
+      <created>1690905765904</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1690905765904</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,6 +139,7 @@
     <MESSAGE value="task 1" />
     <MESSAGE value="add tasks" />
     <MESSAGE value="added consoleUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="added consoleUI" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>
