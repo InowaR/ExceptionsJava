@@ -26,7 +26,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return lastName + " " + firstName + " " + middleName + " " + birthDate.format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) +
-                " " + phone + " " + gender;
+        return "<" + lastName + "><" + firstName + "><" + middleName + "><" + birthDate.format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + "><" + phone + "><" + gender + ">";
     }
 }
